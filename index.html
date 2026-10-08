@@ -4,298 +4,803 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Годекан — Теречное кофе | Отзывы</title>
+<title>Годекан — Теречное кофе</title>
 
 <style>
-*{
-  box-sizing:border-box;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f1eb;
-  color:#171717;
+html {
+    scroll-behavior: smooth;
 }
 
-.wrap{
-  max-width:560px;
-  margin:auto;
-  padding:18px 16px 40px;
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+    line-height: 1.5;
 }
 
-.hero{
-  background:#171717;
-  color:white;
-  border-radius:28px;
-  padding:34px 24px 28px;
-  text-align:center;
-  box-shadow:0 12px 35px rgba(0,0,0,.14);
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: auto;
 }
 
-.logo{
-  width:64px;
-  height:64px;
-  margin:0 auto 16px;
-  border:1px solid rgba(255,255,255,.35);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
+/* HEADER */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 15px;
+    background:
+        radial-gradient(circle at top, #2a241c 0%, #0d0d0d 55%);
 }
 
-h1{
-  margin:0;
-  font-size:29px;
-  letter-spacing:-.8px;
+.hero {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(25,25,25,.88);
+    border: 1px solid #302d29;
+    border-radius: 35px;
+    padding: 55px 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
 }
 
-.subtitle{
-  margin:9px 0 0;
-  color:#cfcfcf;
-  font-size:14px;
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid #4b463e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background: #151515;
 }
 
-.location{
-  margin-top:18px;
-  font-size:13px;
-  color:#bdbdbd;
+.hero h1 {
+    margin-top: 25px;
+    font-size: clamp(42px, 10vw, 76px);
+    letter-spacing: 2px;
 }
 
-.card{
-  background:white;
-  border-radius:22px;
-  margin-top:16px;
-  padding:22px;
-  box-shadow:0 7px 25px rgba(0,0,0,.06);
+.subtitle {
+    color: #999;
+    font-size: 20px;
+    margin-top: 5px;
+    letter-spacing: 2px;
 }
 
-.card h2{
-  font-size:20px;
-  margin:0 0 16px;
+.location {
+    color: #777;
+    margin-top: 20px;
+    font-size: 17px;
 }
 
-.rating{
-  display:flex;
-  gap:8px;
-  justify-content:center;
-  margin:5px 0 18px;
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
 }
 
-.star{
-  border:0;
-  background:#f0ede7;
-  color:#aaa;
-  width:48px;
-  height:48px;
-  border-radius:14px;
-  font-size:25px;
-  cursor:pointer;
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    background: #292724;
+    border: 1px solid #444039;
+    font-weight: bold;
+    transition: .2s;
 }
 
-.star.active{
-  background:#171717;
-  color:#fff;
+.btn:hover {
+    transform: translateY(-2px);
+    background: #37332e;
+}
+
+.btn.primary {
+    background: #fff;
+    color: #111;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: #999;
+}
+
+/* MENU */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.menu-card {
+    background: #1a1918;
+    border: 1px solid #2e2c29;
+    border-radius: 20px;
+    padding: 22px;
+}
+
+.menu-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #2b2926;
+    color: #ccc;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.price {
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* PROMO */
+
+.promo {
+    background: linear-gradient(135deg, #25211c, #171513);
+    border: 1px solid #41392f;
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+
+.promo h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.promo p {
+    color: #aaa;
+}
+
+/* REVIEW FORM */
+
+.review-box {
+    background: #1a1918;
+    border: 1px solid #2e2c29;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.stars {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.star {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 15px;
+    background: #302e2a;
+    color: #888;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.star.active {
+    color: #fff;
+    background: #514d46;
 }
 
 input,
-textarea{
-  width:100%;
-  border:1px solid #ddd8cf;
-  border-radius:14px;
-  padding:14px;
-  font-size:15px;
-  outline:none;
-  background:#faf9f6;
-  margin-bottom:11px;
-  font-family:inherit;
+textarea {
+    width: 100%;
+    background: #242321;
+    color: white;
+    border: 1px solid #494640;
+    border-radius: 16px;
+    padding: 17px;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 14px;
 }
 
-textarea{
-  min-height:115px;
-  resize:vertical;
+textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
-button.send{
-  width:100%;
-  border:0;
-  border-radius:14px;
-  padding:15px;
-  background:#171717;
-  color:white;
-  font-size:16px;
-  font-weight:700;
-  cursor:pointer;
+input:focus,
+textarea:focus {
+    border-color: #777;
 }
 
-.note{
-  text-align:center;
-  color:#888;
-  font-size:12px;
-  margin-top:10px;
+.send {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    border-radius: 16px;
+    background: white;
+    color: #111;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.summary{
-  display:flex;
-  align-items:center;
-  gap:20px;
+.thanks {
+    text-align: center;
+    color: #aaa;
+    margin-top: 18px;
 }
 
-.big-rating{
-  font-size:42px;
-  font-weight:800;
-  line-height:1;
+/* REVIEWS */
+
+.reviews {
+    display: grid;
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.small-stars{
-  font-size:19px;
-  letter-spacing:2px;
+.review {
+    background: #191817;
+    border: 1px solid #2e2c29;
+    border-radius: 20px;
+    padding: 22px;
 }
 
-.count{
-  color:#888;
-  font-size:13px;
-  margin-top:5px;
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.review{
-  padding:17px 0;
-  border-bottom:1px solid #eee;
+.review-name {
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.review:last-child{
-  border-bottom:0;
-  padding-bottom:0;
+.review-stars {
+    color: #fff;
 }
 
-.review-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.review-date {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.name{
-  font-weight:700;
+.review-text {
+    color: #bbb;
 }
 
-.date{
-  font-size:12px;
-  color:#999;
+/* CONTACTS */
+
+.contact-card {
+    background: #191817;
+    border: 1px solid #2e2c29;
+    border-radius: 25px;
+    padding: 30px;
 }
 
-.review-stars{
-  font-size:14px;
-  margin:7px 0;
-  color:#222;
+.contact-line {
+    padding: 15px 0;
+    border-bottom: 1px solid #2b2926;
 }
 
-.review-text{
-  margin:0;
-  line-height:1.5;
-  font-size:14px;
-  color:#444;
+.contact-line:last-child {
+    border-bottom: none;
 }
 
-.footer{
-  text-align:center;
-  color:#999;
-  font-size:12px;
-  padding:22px 0;
+.contact-line strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact-line span {
+    color: #aaa;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    padding: 40px 15px;
+    border-top: 1px solid #222;
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 50px 0;
+    }
+
+    .hero {
+        padding: 45px 18px;
+        border-radius: 28px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .review-box {
+        padding: 22px;
+    }
+
+    .star {
+        width: 48px;
+        height: 48px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrap">
+<!-- HERO -->
 
-  <section class="hero">
-    <div class="logo">☕</div>
+<header>
+    <div class="hero">
 
-    <h1>ГОДЕКАН</h1>
+        <div class="logo">☕</div>
 
-    <div class="subtitle">
-      ТЕРЕЧНОЕ КОФЕ
-    </div>
+        <h1>ГОДЕКАН</h1>
 
-    <div class="location">
-      Теречное · Отзывы наших гостей
-    </div>
-  </section>
-
-
-  <section class="card">
-
-    <h2>Оставить отзыв</h2>
-
-    <div class="rating" id="rating">
-
-      <button class="star" data-value="1">
-        ★
-      </button>
-
-      <button class="star" data-value="2">
-        ★
-      </button>
-
-      <button class="star" data-value="3">
-        ★
-      </button>
-
-      <button class="star" data-value="4">
-        ★
-      </button>
-
-      <button class="star" data-value="5">
-        ★
-      </button>
-
-    </div>
-
-
-    <input
-      id="name"
-      placeholder="Ваше имя"
-    >
-
-
-    <textarea
-      id="text"
-      placeholder="Расскажите, как вам у нас ☕"
-    ></textarea>
-
-
-    <button
-      class="send"
-      onclick="sendReview()"
-    >
-      Оставить отзыв
-    </button>
-
-
-    <div class="note">
-      Спасибо, что помогаете нам становиться лучше ❤️
-    </div>
-
-  </section>
-
-
-  <section class="card">
-
-    <h2>Отзывы гостей</h2>
-
-
-    <div class="summary">
-
-      <div>
-
-        <div class="big-rating">
-          4.9
+        <div class="subtitle">
+            ТЕРЕЧНОЕ КОФЕ
         </div>
 
-        <div class="small-stars">
-          ★★★★★
+        <div class="location">
+            📍 Теречное
         </div>
 
-     
+        <div class="buttons">
+            <a href="#menu" class="btn primary">
+                Меню
+            </a>
+
+            <a href="#reviews" class="btn">
+                Отзывы
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- MENU -->
+
+<section id="menu">
+<div class="container">
+
+    <h2 class="section-title">
+        Наше <span>меню</span>
+    </h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-card">
+            <h3>☕ Кофе</h3>
+
+            <div class="menu-item">
+                <span>Эспрессо</span>
+                <span class="price">100₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Американо</span>
+                <span class="price">120₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Капучино</span>
+                <span class="price">180₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Латте</span>
+                <span class="price">190₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Раф</span>
+                <span class="price">220₽</span>
+            </div>
+        </div>
+
+
+        <div class="menu-card">
+            <h3>🍵 Чай</h3>
+
+            <div class="menu-item">
+                <span>Малина & имбирь</span>
+                <span class="price">200₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Пуэр</span>
+                <span class="price">180₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Те Гуань Инь</span>
+                <span class="price">180₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Да Хун Пао</span>
+                <span class="price">200₽</span>
+            </div>
+        </div>
+
+
+        <div class="menu-card">
+            <h3>🥤 Лимонады</h3>
+
+            <div class="menu-item">
+                <span>Щавель & апельсин</span>
+                <span class="price">220₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Ягодный</span>
+                <span class="price">220₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Классический</span>
+                <span class="price">200₽</span>
+            </div>
+        </div>
+
+
+        <div class="menu-card">
+            <h3>🥤 Смузи</h3>
+
+            <div class="menu-item">
+                <span>Клубника & банан</span>
+                <span class="price">250₽</span>
+            </div>
+
+            <div class="menu-item">
+                <span>Ягодный</span>
+                <span class="price">250₽</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- PROMOTIONS -->
+
+<section id="promotions">
+<div class="container">
+
+    <h2 class="section-title">
+        🔥 <span>Акции</span>
+    </h2>
+
+    <div class="promo">
+        <h3>Подарки для гостей 🎁</h3>
+        <p>
+            Возобновляем старые традиции.
+            Подарки для посетителей с детьми.
+        </p>
+    </div>
+
+    <div class="promo">
+        <h3>Натуральный горный мёд 🍯</h3>
+        <p>
+            Горный натуральный мёд с сотами.
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+<div class="container">
+
+    <h2 class="section-title">
+        Оставить <span>отзыв</span>
+    </h2>
+
+    <div class="review-box">
+
+        <div class="stars">
+
+            <button class="star" onclick="setRating(1)">★</button>
+            <button class="star" onclick="setRating(2)">★</button>
+            <button class="star" onclick="setRating(3)">★</button>
+            <button class="star" onclick="setRating(4)">★</button>
+            <button class="star" onclick="setRating(5)">★</button>
+
+        </div>
+
+        <input
+            id="name"
+            type="text"
+            placeholder="Ваше имя"
+        >
+
+        <textarea
+            id="text"
+            placeholder="Расскажите, как вам у нас ☕"
+        ></textarea>
+
+        <button
+            class="send"
+            onclick="sendReview()"
+        >
+            Оставить отзыв
+        </button>
+
+        <div class="thanks">
+            Спасибо, что помогаете нам становиться лучше ❤️
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title" style="margin-top:55px;">
+        Отзывы <span>гостей</span>
+    </h2>
+
+    <div id="reviewsList" class="reviews"></div>
+
+</div>
+</section>
+
+
+<!-- CONTACTS -->
+
+<section id="contacts">
+<div class="container">
+
+    <h2 class="section-title">
+        <span>Контакты</span>
+    </h2>
+
+    <div class="contact-card">
+
+        <div class="contact-line">
+            <strong>📍 Адрес</strong>
+            <span>Дагестан, Хасавюртовский район, Теречное</span>
+        </div>
+
+        <div class="contact-line">
+            <strong>🕘 Работаем</strong>
+            <span>09:00 – 23:00 ежедневно</span>
+        </div>
+
+        <div class="contact-line">
+            <strong>📞 Заказ</strong>
+            <span>+7 922 007-54-54</span>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <a
+            class="btn primary"
+            href="tel:+79220075454"
+        >
+            📞 Позвонить
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<footer>
+    ☕ ГОДЕКАН — ТЕРЕЧНОЕ КОФЕ
+    <br>
+    <small>Спасибо, что выбираете нас ❤️</small>
+</footer>
+
+
+<script>
+
+let rating = 0;
+
+
+/* RATING */
+
+function setRating(value) {
+
+    rating = value;
+
+    const stars = document.querySelectorAll(".star");
+
+    stars.forEach((star, index) => {
+
+        if (index < value) {
+            star.classList.add("active");
+        } else {
+            star.classList.remove("active");
+        }
+
+    });
+}
+
+
+/* SAVE REVIEW */
+
+function sendReview() {
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const text =
+        document.getElementById("text").value.trim();
+
+    if (!name) {
+        alert("Введите ваше имя");
+        return;
+    }
+
+    if (!rating) {
+        alert("Поставьте оценку");
+        return;
+    }
+
+    if (!text) {
+        alert("Напишите отзыв");
+        return;
+    }
+
+    const reviews =
+        JSON.parse(localStorage.getItem("godekanReviews")) || [];
+
+    reviews.unshift({
+
+        name: name,
+
+        text: text,
+
+        rating: rating,
+
+        date: new Date().toLocaleDateString("ru-RU")
+
+    });
+
+    localStorage.setItem(
+        "godekanReviews",
+        JSON.stringify(reviews)
+    );
+
+    document.getElementById("name").value = "";
+    document.getElementById("text").value = "";
+
+    rating = 0;
+
+    document.querySelectorAll(".star")
+        .forEach(star =>
+            star.classList.remove("active")
+        );
+
+    loadReviews();
+
+    alert("Спасибо за ваш отзыв ❤️");
+}
+
+
+/* LOAD REVIEWS */
+
+function loadReviews() {
+
+    const list =
+        document.getElementById("reviewsList");
+
+    const reviews =
+        JSON.parse(localStorage.getItem("godekanReviews")) || [];
+
+    list.innerHTML = "";
+
+    if (reviews.length === 0) {
+
+        list.innerHTML = `
+            <div class="review">
+                <div class="review-text">
+                    Пока отзывов нет. Будьте первым! ☕
+                </div>
+            </div>
+        `;
+
+        return;
+    }
+
+    reviews.forEach(review => {
+
+        const stars =
+            "★".repeat(review.rating) +
+            "☆".repeat(5 - review.rating);
+
+        list.innerHTML += `
+
+            <div class="review">
+
+                <div class="review-top">
+
+                    <div class="review-name">
+                        ${escapeHtml(review.name)}
+                    </div>
+
+                    <div class="review-stars">
+                        ${stars}
+                    </div>
+
+                </div>
+
+                <div class="review-date">
+                    ${review.date}
+                </div>
+
+                <div class="review-text">
+                    ${escapeHtml(review.text)}
+                </div>
+
+            </div>
+
+        `;
+
+    });
+}
+
+
+/* SECURITY */
+
+function escapeHtml(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+}
+
+
+/* START */
+
+loadReviews();
+
+</script>
+
+</body>
+</html>
